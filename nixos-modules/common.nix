@@ -3,5 +3,5 @@
     isNormalUser = true;
     description = "hsheikhali";
     home = "/home/hsheikhali/";
-  }
+  };
 }
