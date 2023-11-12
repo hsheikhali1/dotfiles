@@ -16,7 +16,7 @@
         modules = [
           home-manager.nixosModules.home-manager {
             home-manager.useUserPackages = true;
-            home-manager.users.hsheikhali = import /home/hsheikhali/.config/home-manager/home.nix;
+            home-manager.users.hsheikhali = import ./home-manager/home.nix;
           }
         ];
       };
