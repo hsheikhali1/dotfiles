@@ -53,6 +53,8 @@
     builtins.elem (lib.getName pkg) [
       "1password"
       "spotify"
+      "obsidian"
+      "discord"
     ];
 
   # You can also manage environment variables but you will have to manually
