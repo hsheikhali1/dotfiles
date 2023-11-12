@@ -18,6 +18,14 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    nodejs_20
+    pkgs.nodePackages_latest.pnpm
+    alacritty
+    kitty-themes
+    kitty
+    steam
+    chromium
+    firefox
     _1password-gui
   	wezterm
     neovim
@@ -56,6 +64,8 @@
       "spotify"
       "obsidian"
       "discord"
+      "steam-original"
+      "steam"
     ];
 
   # You can also manage environment variables but you will have to manually
