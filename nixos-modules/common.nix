@@ -95,6 +95,7 @@
     vlc
     signal-desktop
     (discord.override { withOpenASAR = true; })
+    ripgrep
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

@@ -9,9 +9,15 @@
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "88x2bu" ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = [
+  (config.boot.kernelPackages.rtl88x2bu.overrideAttrs (old: {
+      prePatch = old.prePatch + ''
+        substituteInPlace Makefile --replace "CONFIG_CONCURRENT_MODE = n" "CONFIG_CONCURRENT_MODE = y"
+      '';
+    }))
+  ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/28b8b39a-3072-4ead-bb75-fe294c269217";
