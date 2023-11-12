@@ -2,6 +2,6 @@
   users.users.hsheikhali = {
     isNormalUser = true;
     description = "hsheikhali";
-    home = "/home/hsheikhali/"
+    home = "/home/hsheikhali/";
   }
 }

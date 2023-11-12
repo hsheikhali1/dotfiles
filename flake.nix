@@ -14,6 +14,7 @@
       pc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ./nixos-modules/common.nix
           home-manager.nixosModules.home-manager {
             home-manager.useUserPackages = true;
             home-manager.users.hsheikhali = import ./home-manager/home.nix;
