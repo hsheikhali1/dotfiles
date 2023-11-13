@@ -31,6 +31,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -62,6 +63,13 @@
     #media-session.enable = true;
   };
 
+  # enable docker
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -70,7 +78,7 @@
     isNormalUser = true;
     description = "Harun Sheikhali";
     home = "/home/hsheikhali";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
   # Allow unfree packages

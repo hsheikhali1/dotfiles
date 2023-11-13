@@ -18,6 +18,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    atuin
+    supabase-cli
+    docker
     nodejs_20
     pkgs.nodePackages_latest.pnpm
     alacritty
