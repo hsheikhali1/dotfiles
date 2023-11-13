@@ -70,6 +70,13 @@
     setSocketVariable = true;
   };
 
+  # steam
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -89,6 +96,8 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+    steam-run
+    mullvad-vpn
   	wezterm
  	  neovim
 	  zsh
@@ -110,6 +119,7 @@
   nixpkgs.config.permittedInsecurePackages = [
   	"electron-24.8.6"
   ];
+  services.mullvad-vpn.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

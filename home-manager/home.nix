@@ -18,6 +18,8 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    lazygit
+    vscode
     atuin
     supabase-cli
     docker
@@ -69,6 +71,8 @@
       "discord"
       "steam-original"
       "steam"
+      "steam-run"
+      "vscode"
     ];
 
   # You can also manage environment variables but you will have to manually
