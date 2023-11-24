@@ -18,6 +18,16 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    swaylock
+    killall
+    nwg-bar
+    font-awesome
+    xfce.thunar
+    lxqt.pcmanfm-qt
+    dunst
+    swww
+    libnotify
+    xclip
     brave
     emacs29
     gnumake
