@@ -18,6 +18,32 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    gparted
+    woeusb-ng
+    etcher
+    wineWowPackages.wayland
+    lutris
+    capitaine-cursors
+    jetbrains-mono
+    material-design-icons
+    unzip
+    font-manager
+    zoom-us
+    obs-studio
+    obs-studio-plugins.wlrobs
+    sway-contrib.grimshot
+    wl-clipboard
+    fd
+    grim
+    swappy
+    slurp
+    libsForQt5.qt5.qtwayland
+    qt6.qtwayland
+    wireplumber
+    pipewire
+    flameshot
+    atuin
+    neofetch
     swaylock
     killall
     nwg-bar

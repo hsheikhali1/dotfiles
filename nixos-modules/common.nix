@@ -56,12 +56,13 @@
   };
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.wlr.enable = true;
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk];
   #xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-hyprland];
 
   security.rtkit.enable = true;
-
   security.polkit.enable = true;
+  security.pam.services.swaylock = {};
 
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
@@ -80,7 +81,7 @@
   };
 
   services.pipewire = {
-    enable = false;
+    enable = true;
     alsa.enable = false;
     alsa.support32Bit = false;
     pulse.enable = false;
@@ -161,6 +162,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.permittedInsecurePackages = [
   	"electron-24.8.6"
+    "electron-19.1.9"
   ];
   services.mullvad-vpn.enable = true;
 
