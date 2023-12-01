@@ -1,0 +1,87 @@
+{
+  "layer": "top",
+  //"output": ["eDP-1"],
+  "position": "top",
+  "modules-left": ["hyprland/workspaces","sway/mode","custom/power"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "pulseaudio", "cpu", "memory", "tray"],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+        "default": "󰝦",
+	      "focused": "󰝥",
+	  },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
+    "disable-click": true,
+  },
+ 
+  "sway/mode": {
+    "format": "󱨈"
+  },
+
+  "clock": {
+    "format": "{:%a %d/%m %I:%M}",
+    "interval": 60
+  },
+
+  "custom/music": {
+    "tooltip": false,
+    "format": "{}",
+    "interval": "once",
+    "signal": 1
+  },
+
+  "network": {
+    // "interface": "wlp170s0",
+    "format-icons": ["󰤟","󰤢","󰤥","󰤨"],
+    "format": "Disconnected 󰤭", 
+    "format-wifi": "{essid}  {icon}",
+    "format-disconnected": "Disconnected 󰤭",
+
+    "tooltip": false,
+    "max-length": 50
+  },
+    "pulseaudio": {
+      // "scroll-step": 1, // %, can be a float
+      "format": "{volume}% {icon} {format_source}",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": " {format_source}",
+      "format-source": "{volume}% ",
+      "format-source-muted": "",
+      "format-icons": {
+          "headphone": "",
+          "hands-free": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol"
+    },
+    "custom/power":{
+      "format": "  ",
+      "on-click": "nwg-bar",
+      "on-click-right": "killall nwg-bar"
+    }
+}

@@ -18,10 +18,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    gparted
-    woeusb-ng
-    etcher
-    wineWowPackages.wayland
+    blueman
+    wlogout
+    nwg-look
     lutris
     capitaine-cursors
     jetbrains-mono
@@ -127,6 +126,13 @@
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
     EDITOR = "nvim";
+  };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    size = 40;
+    package = pkgs.capitaine-cursors;
+    name = "Capitaine Cursors";
   };
 
   # Let Home Manager install and manage itself.
