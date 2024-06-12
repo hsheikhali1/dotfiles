@@ -26,6 +26,8 @@
       nixfmt
       lua
       ripgrep
+      nodePackages.typescript
+      nodePackages.typescript-language-server
     ];
   };
 }
