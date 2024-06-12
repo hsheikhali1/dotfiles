@@ -8,6 +8,8 @@
 	  ./modules/home-manager/fish.nix
     ./modules/home-manager/wezterm.nix
     ./modules/home-manager/kitty.nix
+    ./modules/home-manager/theme.nix
+    ./modules/home-manager/starship.nix
     #./modules/home-manager/ssh.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -58,6 +60,10 @@
     fnm
     atuin
     brave
+    pcmanfm
+    fzf
+    jq
+    lazygit
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -97,4 +103,8 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # enable direnv for flakes
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
 }
