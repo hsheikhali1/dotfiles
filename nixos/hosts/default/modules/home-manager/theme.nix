@@ -2,14 +2,18 @@
 
   gtk = {
     enable = true;
+    # theme = {
+    #   package = pkgs.nordic;
+    #   name = "Nordic-bluish-accent";
+    # };
     theme = {
       package = pkgs.tokyonight-gtk-theme;
-      name = "Tokyonight-Dark-BL";
+      name = "Tokyonight-Dark-B";
     };
   };
   dconf.settings = {
     "org/gnome/shell/extensions/user-theme" = {
-      name = "Tokyonight-Dark-BL";
+      name = "Tokyonight-Dark-B";
     };
   };
   xdg.configFile = {

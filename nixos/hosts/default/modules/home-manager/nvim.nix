@@ -22,6 +22,7 @@
     extraPackages = with pkgs; [
       gcc
       sumneko-lua-language-server
+      tailwindcss-language-server
       nil
       nixfmt
       lua

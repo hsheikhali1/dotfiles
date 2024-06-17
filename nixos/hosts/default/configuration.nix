@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, inputs, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports =
@@ -41,6 +41,23 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # enable DWM
+  #services.xserver.windowManager.dwm.enable = true;
+
+  # services.xserver = {
+  #   windowManager.awesome = {
+  #     enable = true;
+  #     package = pkgs.awesome.overrideAttrs (old: {
+  #       src = pkgs.fetchFromGitHub {
+  #         owner = "awesomeWM";
+  #         repo = "awesome";
+  #         rev = "ad0290bc1aac3ec2391aa14784146a53ebf9d1f0";
+  #         sha256 = "sha256-uaskBbnX8NgxrprI4UbPfb5cRqdRsJZv0YXXshfsxFU=";
+  #       };
+  #     });
+  #   };
+  # };
+
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -68,6 +85,12 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+
+  # nixpkgs.overlays = [
+  #   (final: prev: {
+  #     dwm = prev.dwm.overrideAttrs (old: {src = /home/workstation/.config/dwm-titus;}); #FIX ME: Update with path to your dwm folder
+  #   })
+  # ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.workstation = {

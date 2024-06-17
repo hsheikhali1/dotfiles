@@ -51,6 +51,7 @@
       withOpenASAR = true;
       withVencord = true;
     })
+    dmenu
     wget
     alacritty
     signal-desktop
@@ -64,6 +65,24 @@
     fzf
     jq
     lazygit
+    xclip
+    dunst
+    gnumake
+    nix-prefetch-github
+    nexusmods-app
+    # pamixer
+    # imagemagick
+    # ncmpcpp
+    # mpd
+    # mpdris2
+    # neofetch
+    # brightnessctl
+    # inotify-tools
+    # uptimed
+    # brillo
+    # bluez
+    # picom
+    # redshift
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

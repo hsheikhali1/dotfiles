@@ -68,6 +68,9 @@ return {
           nil_ls = {
             mason = false,
           },
+          tailwindcss = {
+            mason = false,
+          },
           tsserver = {
             mason = false,
           },
