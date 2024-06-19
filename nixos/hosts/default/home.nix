@@ -70,7 +70,6 @@
     gnumake
     nix-prefetch-github
     nexusmods-app
-    chromium
     # pamixer
     # imagemagick
     # ncmpcpp
